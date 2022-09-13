@@ -6,6 +6,7 @@ pipeline {
         stage('initilization') {
           steps {
             echo 'echo "hello world"'
+            build(job: 'avileap', propagate: true, quietPeriod: 3, wait: true)
           }
         }
 
