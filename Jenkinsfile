@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('init') {
+    stage('initilization') {
       parallel {
-        stage('init') {
+        stage('initilization') {
           steps {
             echo 'echo "hello world"'
           }
@@ -11,22 +11,16 @@ pipeline {
 
         stage('test') {
           steps {
-            echo 'echo "test"'
-          }
-        }
-
-        stage('deploy') {
-          steps {
-            echo 'echo "deploy'
+            echo 'echo "testing done"'
           }
         }
 
       }
     }
 
-    stage('end') {
+    stage('deploy') {
       steps {
-        echo 'echo "end"'
+        echo 'echo "deployment is done'
       }
     }
 
